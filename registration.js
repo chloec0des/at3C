@@ -13,7 +13,7 @@ $(document).ready(function() {
                         min: 2,
                     },
                         notEmpty: {
-                        message: 'Please enter your First Name'
+                        message: 'First Name'
                     }
                 }
             },
@@ -23,7 +23,7 @@ $(document).ready(function() {
                         min: 2,
                     },
                     notEmpty: {
-                        message: 'Please enter your Last Name'
+                        message: 'Last Name'
                     }
                 }
             },
@@ -33,7 +33,7 @@ $(document).ready(function() {
                         min: 8,
                     },
                     notEmpty: {
-                        message: 'Please enter your Username'
+                        message: 'Username'
                     }
                 }
             },
@@ -43,7 +43,7 @@ $(document).ready(function() {
                         min: 8,
                     },
                     notEmpty: {
-                        message: 'Please enter your Password'
+                        message: 'Password'
                     }
                 }
             },
@@ -53,14 +53,14 @@ $(document).ready(function() {
                         min: 8,
                     },
                     notEmpty: {
-                        message: 'Please confirm your Password'
+                        message: 'Confirm your Password'
                     }
                 }
             },
             email: {
                 validators: {
                     notEmpty: {
-                        message: 'Please enter your Email Address'
+                        message: 'Email Address'
                     },
                     emailAddress: {
                         message: 'Please enter a valid Email Address'
@@ -73,17 +73,11 @@ $(document).ready(function() {
                         min: 12, 
                         max: 12,
                     notEmpty: {
-                        message: 'Please enter your Contact No.'
+                        message: 'Phone No.'
                      }
                 }
             },
-			 department: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please select your Department/Office'
-                    }
-                }
-            },
+			
                 }
             }
         })
@@ -100,7 +94,7 @@ $(document).ready(function() {
             // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
 
-            // Use Ajax to submit form data
+            // Ajax to submit form data
             $.post($form.attr('action'), $form.serialize(), function(result) {
                 console.log(result);
             }, 'json');
